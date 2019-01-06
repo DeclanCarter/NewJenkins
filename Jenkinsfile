@@ -2,13 +2,6 @@ pipeline{
     agent any
 
     stages{
-        stage('Fetching'){
-		steps {
-		echo 'Fetching repository'
-		git 'https://github.com/DeclanCarter/NewJenkins'
-				}
-			}
-		}
         stage('Build'){
             steps{
 			echo 'Building task'
