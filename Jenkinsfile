@@ -26,8 +26,11 @@ pipeline{
     success {
         echo 'Successful'
     }
-  }
+  
   failure {
   echo 'Errors had occurred'
 }
+
+}
+
 }
