@@ -3,8 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by Tomas Phelan on 15/02/2017.
- * test123456
+ * Created by meudecc on 15/02/2017.
  */
 public class studentTest {
     @org.junit.Test(expected = IllegalArgumentException.class)
