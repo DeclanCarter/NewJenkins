@@ -7,7 +7,7 @@ pipeline{
 			echo 'Building task'
 				
                 bat '''
-        javac -cp "C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\junit-4.13-beta-1.jar";"C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\hamcrest-core-2.1.jar";. "source\\main\\java\\Student.java" "source\\test\\java\\StudentTest.java"
+        javac -cp 'C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\junit-4.13-beta-1.jar;C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\hamcrest-core-2.1.jar";. source\\main\\java\\Student.java source\\test\\java\\StudentTest.java'
         '''
 		}
     }
@@ -15,7 +15,7 @@ pipeline{
 		steps{
 		echo 'Testing Task'
 		  bat '''
-        java -cp "C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\junit-4.13-beta-1.jar";"C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\hamcrest-all-1.3.jar";. org.junit.runner.JUnitCore "source\\test\\java\\StudentTest"
+        java -cp 'C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\junit-4.13-beta-1.jar;C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\hamcrest-all-1.3.jar;. org.junit.runner.JUnitCore source\\test\\java\\StudentTest'
         '''
 
 	  }
