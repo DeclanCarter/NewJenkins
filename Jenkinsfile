@@ -2,10 +2,11 @@ pipeline{
     agent any
 
     stages{
-	
+	steps{
 	stage('Fetch') {
        git 'https://github.com/DeclanCarter/NewJenkins'
     }
+	}
 	
         stage('Build'){
             steps{
