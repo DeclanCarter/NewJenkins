@@ -6,14 +6,17 @@ pipeline{
             steps{
 			echo 'Building task'
 				
-                bat 'mvn clean compile;C:\Program Files\Java\jdk1.8.0_171\bin\Javac.exe -cp lib/junit-4.13-beta-1.jar;lib/hamcrest-core-2.1.jar;source/Student.java;. source/studentTest.java
-        }
+                bat '''
+        javac -cp "C:\Users\unumuser\Desktop\Jenkins\lib\junit-4.13-beta-1.jar";"C:\Users\unumuser\Desktop\Jenkins\lib\hamcrest-core-2.1.jar";. "Student.java" "StudentTest.java"
+        '''
+		}
     }
 		stage('Test'){
 		steps{
 		echo 'Testing Task'
-		  bat 'mvn test; C:\Program Files\Java\jdk1.8.0_171\bin\Java.exe -cp lib/junit-4.13-beta-1.jar;lib/hamcrest-core-2.1.jar;. org.junit.runner.JUnitCore studentTest'
-      
+		  bat '''
+        java -cp "C:\Users\unumuser\Desktop\Jenkins\lib\junit-4.13-beta-1.jar";"C:\Users\unumuser\Desktop\Jenkins\lib\hamcrest-all-1.3.jar";. org.junit.runner.JUnitCore studentTest"
+        '''
 
 	  }
 }
