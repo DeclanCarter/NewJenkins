@@ -9,7 +9,7 @@ pipeline{
 			echo 'Building task'
 				
                 bat '''
-        javac -cp "C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\junit-4.12.jar";"C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\hamcrest-core-1.3.jar";. "Student.java" "StudentTest.java"
+        javac -cp "C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\junit-4.12.jar";"C:\\Users\\unumuser\\Desktop\\Jenkins\\lib\\hamcrest-core-1.3.jar";. "Student.java" "studentTest.java"
         '''
 		}
     }
