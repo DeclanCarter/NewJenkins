@@ -18,12 +18,6 @@ node {
 	  
 }
 
-  post {
-    success {
-        echo 'Successful'
-    } 
-  failure {
-  echo 'Errors had occurred'
+
 }
-}
-}
+
